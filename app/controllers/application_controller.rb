@@ -40,7 +40,7 @@ class ApplicationController < Sinatra::Base
     @post.name = params[:name]
     @post.content = params[:content]
     # Post.update(@post.name)
-    @post.save
+    @post.update
     erb :show
   end
 
