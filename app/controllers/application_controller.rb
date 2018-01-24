@@ -35,6 +35,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/posts/:id' do
+    binding.pry
     @post = Post.find(params[:id])
     Post.update(@post)
     redirect '/posts/:id/edit'
