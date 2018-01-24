@@ -41,7 +41,7 @@ class ApplicationController < Sinatra::Base
     @post.save
     redirect to("/posts/#{post.id}")
   end
-  delete '/posts/:id/delete''
+  delete '/posts/:id/delete'
 
 
 end
