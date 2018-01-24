@@ -50,7 +50,11 @@ class ApplicationController < Sinatra::Base
     @post.delete
     erb :delete
   end
-  get 'posts/:id/delete'
+  get 'posts/:id/delete'do
+  @post = Post.find(params[:id])
+  redirect to("/posts/#{@post.id}")
+
+  end
 
 
 end
