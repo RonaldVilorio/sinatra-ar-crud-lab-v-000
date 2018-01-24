@@ -39,6 +39,7 @@ class ApplicationController < Sinatra::Base
     @post.name = params[:name]
     @post.content = params[:content]
     @post.save
+    @post.id
     redirect '/posts/2'
   end
 
