@@ -34,7 +34,7 @@ class ApplicationController < Sinatra::Base
     erb :edit
   end
 
-  post '/patch/:id' do
+  post '/posts/:id' do
     binding.pry
     @post = Post.find(params[:id])
     Post.update(@post)
